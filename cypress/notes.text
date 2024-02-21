@@ -1,0 +1,33 @@
+//just add tags in ur feature file
+# run only the tests with tag "@unit"
+->>>    npx cypress run --env tags=@unit
+
+
+To execute other tests except ‘Smoke’ use this command.
+
+npx cypress run --env tags="not @Smoke"
+
+
+To execute all tests that contain either one of the tags.
+
+npx cypress run --env tags="@Smoke or @regression"
+4) Execute all tests that contain both of the tags.
+
+npx cypress run --env tags="@Smoke and @regression"
+
+
+
+
+-------old version--------
+
+
+# run only the tests with tag "@unit"
+$ npx cypress run --env tags=@unit
+# run only the tests with tag "@unit" or "@config"
+$ npx cypress run --env tags="@unit or @config"
+# run only the tests with tags "@unit" and "@config"
+$ npx cypress run --env tags="@unit and @config"
+# run only the tests with tags "@unit" and "@config" or the tests with tag "@smoke"
+$ npx cypress run --env tags="(@unit and @config) or @smoke"
+# run any the tests with tags neither "@unit" nor "@config"
+$ npx cypress run --env tags="not (@unit or @config)"
