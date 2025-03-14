@@ -30,7 +30,7 @@ When("User log-in with {string} and {string}", (username, password) => {
 })
 */
 
-// other way When User log-in with <Username> and <Password> --then use - {string}
+// other way->   When User log-in with <Username> and <Password> --then use - {string}
 When("User log-in with {word} and {word}", (username, password) => {
     cy.get('#username').type(username)
     cy.get('#password').type(password)

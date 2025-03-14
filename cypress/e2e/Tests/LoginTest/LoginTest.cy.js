@@ -6,6 +6,10 @@ import login from "../../../support/Pages/Login.cy"
 Given("I navigate to the Website",()=>{
     login.enterURL();
 })
+Given("I say Hello",()=>{
+    cy.log('I say Hello')
+})
+
 When("I entered valid credential",(datatable)=>{
     datatable.hashes().forEach(data => {
         login.enterUserNamePassword(data.username,data.password);

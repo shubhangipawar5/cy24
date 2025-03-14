@@ -12,3 +12,10 @@ Feature: Google Page
         Given I open google page
         When I see "Google" in the title
         And I verify the text "Gmail"
+
+
+
+
+#BDD TAgging -> https://www.npmjs.com/package/cypress-cucumber-tagging
+# normal https://testersdock.com/cypress-test-tags/
+

@@ -1,3 +1,9 @@
+Note for BDD cucumber just add tags and run command -> npx cypress run -e TAGS='@smoke'
+OR ->  npx cypress run --env TAGS='@sanity'
+
+//https://www.npmjs.com/package/cypress-cucumber-tagging
+//https://testersdock.com/cypress-test-tags/ -- cypress grep
+
 //just add tags in ur feature file
 # run only the tests with tag "@unit"
 ->>>    npx cypress run --env tags=@unit
@@ -5,13 +11,13 @@
 
 To execute other tests except ‘Smoke’ use this command.
 
-npx cypress run --env tags="not @Smoke"
+npx cypress run --env TAGS='not @Smoke'
 
 
 To execute all tests that contain either one of the tags.
 
 npx cypress run --env tags="@Smoke or @regression"
-4) Execute all tests that contain both of the tags.
+ Execute all tests that contain both of the tags.
 
 npx cypress run --env tags="@Smoke and @regression"
 
@@ -31,3 +37,22 @@ $ npx cypress run --env tags="@unit and @config"
 $ npx cypress run --env tags="(@unit and @config) or @smoke"
 # run any the tests with tags neither "@unit" nor "@config"
 $ npx cypress run --env tags="not (@unit or @config)"
+
+
+
+
+
+//reportesrs- https://docs.cypress.io/app/tooling/reporters#__docusaurus_skipToContent_fallback
+here we will have junit reports and mochasom in this repo
+//npm install cypress-multi-reporters mocha-junit-reporter --save-dev --legacy-peer-deps
+const { defineConfig } = require('cypress')
+
+module.exports = defineConfig({
+  reporter: 'cypress-multi-reporters',
+  reporterOptions: {
+    configFile: 'reporter-config.json',
+  },
+})
+
+npm install mochawesome mochawesome-merge mochawesome-report-generator --save-dev junit-merge --legacy-peer-deps 
+//use teh finalqa command for exxecution of reports

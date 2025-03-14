@@ -17,5 +17,8 @@
 
 import './commands'
 
+//cypress grep plugin
+require('cypress-grep')()
+
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
