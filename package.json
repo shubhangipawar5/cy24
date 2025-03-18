@@ -5,6 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "cy:headlessrun": "npx cypress run",
+    "cy:openheaded" : "npx cypress run --headed",
+    "cy:runchrome": "npx cypress run --browser chrome",
     "delete:reports": "rimraf cypress/results",
     "combine:reports": "jrm cypress/results/combined-report.xml \"cypress/results/*.xml\"",
     "prereport": "npm run delete:reports",
