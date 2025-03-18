@@ -3,6 +3,7 @@ const cucumber = require("cypress-cucumber-preprocessor").default;
 
 
 module.exports = defineConfig({
+  projectId: "nqbn5o",
   reporter: 'cypress-multi-reporters',
   reporterOptions: {
     configFile: 'reporter-config.json',

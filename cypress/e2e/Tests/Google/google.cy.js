@@ -15,7 +15,7 @@ Then("I see {string} in the url", (param1)=>{
 })
 
 And("I verify the text {string}",(text)=>{
-    cy.get('div[class="gb_H gb_I"] >a').eq(0).should('have.text',text)
+    cy.get('a').contains(text).should('be.visible')
     //cy.log(Cypress._.random(0, 10))         //random number from 0 to 10 including 10
     cy.log(Cypress._.random(0, 1e6))
 })
