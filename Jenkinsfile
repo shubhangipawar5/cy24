@@ -15,7 +15,7 @@ pipeline {
                     steps {
                         git branch: 'main', url: 'https://github.com/shubhangipawar5/cy24.git'
                         bat 'npm install --legacy-peer-deps'
-                        bat 'npm update'
+                        bat 'npm update --legacy-peer-deps'
                         bat 'npm run cy:dashboard'
                     }
                 }
@@ -27,7 +27,7 @@ pipeline {
                     steps {
                         git branch: 'main', url: 'https://github.com/shubhangipawar5/cy24.git'
                         bat 'npm install --legacy-peer-deps'
-                        bat 'npm update'
+                        bat 'npm update --legacy-peer-deps'
                         bat 'npm run cy:dashboard'
                     }
                 }
