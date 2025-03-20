@@ -8,6 +8,7 @@
     "cy:headlessrun": "npx cypress run",
     "cy:openheaded" : "npx cypress run --headed",
     "cy:runchrome": "npx cypress run --browser chrome",
+    "cy:dashboard": "npx cypress run --record --key 9d7052ef-22b9-459c-b82d-11a057492d14 --parallel",
     "delete:reports": "rimraf cypress/results",
     "combine:reports": "jrm cypress/results/combined-report.xml \"cypress/results/*.xml\"",
     "prereport": "npm run delete:reports",
