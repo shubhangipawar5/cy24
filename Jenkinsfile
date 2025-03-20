@@ -34,4 +34,10 @@ pipeline {
             }
         }
     }
+    post {
+        always {
+            echo 'Pipeline execution completed.'
+            return  // Ensures pipeline stops here
+        }
+    }
 }
