@@ -22,7 +22,7 @@ pipeline {
 
                 stage('Slave Node2') {
                     agent {
-                        label "remote_node1"
+                        label "remote_node2"
                     }
                     steps {
                         git branch: 'main', url: 'https://github.com/shubhangipawar5/cy24.git'
