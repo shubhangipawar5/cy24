@@ -16,7 +16,7 @@ pipeline {
                         git branch: 'main', url: 'https://github.com/shubhangipawar5/cy24.git'
                         bat 'npm install --legacy-peer-deps'
                         bat 'npm update --legacy-peer-deps'
-                        bat 'npm run cy:dashboard'
+                        bat 'npm run %Script%'
                     }
                 }
 
@@ -28,7 +28,7 @@ pipeline {
                         git branch: 'main', url: 'https://github.com/shubhangipawar5/cy24.git'
                         bat 'npm install --legacy-peer-deps'
                         bat 'npm update --legacy-peer-deps'
-                        bat 'npm run cy:dashboard'
+                        bat 'npm run %Script%'
                     }
                 }
             }
@@ -36,8 +36,7 @@ pipeline {
     }
     post {
         always {
-            echo 'Pipeline execution completed.'
-            return  // Ensures pipeline stops here
+             echo 'Stopping the pipeline...'
         }
     }
 }
