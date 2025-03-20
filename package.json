@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "cy:headlessrun": "npx cypress run",
-    "cy:openheaded" : "npx cypress run --headed",
+    "cy:openheaded": "npx cypress run --headed",
     "cy:runchrome": "npx cypress run --browser chrome",
     "cy:dashboard": "npx cypress run --record --key 9d7052ef-22b9-459c-b82d-11a057492d14 --parallel",
     "delete:reports": "rimraf cypress/results",
@@ -29,7 +29,7 @@
     "mocha": "^11.1.0",
     "mocha-junit-reporter": "^2.2.1",
     "mochawesome": "^7.1.3",
-    "mochawesome-merge": "^5.0.0",
+    "mochawesome-merge": "^4.2.1",
     "mochawesome-report-generator": "^6.2.0",
     "rimraf": "^6.0.1"
   },
