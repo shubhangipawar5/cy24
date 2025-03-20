@@ -13,7 +13,7 @@ pipeline {
                         label "remote_node1"
                     }
                     steps {
-                        git url: 'https://github.com/shubhangipawar5/cy24.git'
+                        git branch: 'main', url: 'https://github.com/shubhangipawar5/cy24.git'
                         bat 'npm install'
                         bat 'npm update'
                         bat 'npm run cy:dashboard'
@@ -25,7 +25,7 @@ pipeline {
                         label "remote_node1"
                     }
                     steps {
-                        git url: 'https://github.com/shubhangipawar5/cy24.git'
+                        git branch: 'main', url: 'https://github.com/shubhangipawar5/cy24.git'
                         bat 'npm install'
                         bat 'npm update'
                         bat 'npm run cy:dashboard'
